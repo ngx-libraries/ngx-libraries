@@ -19,7 +19,7 @@
     "@angular/platform-browser": "11.2.14",
     "@angular/platform-browser-dynamic": "11.2.14",
     "@angular/router": "11.2.14",
-    "@ngx-pwa/local-storage": "11.1.0",
+    "@ngx-pwa/local-storage": "12.1.0",
     "markdownlint": "0.23.1",
     "rxjs": "6.6.7",
     "tslib": "2.3.0",

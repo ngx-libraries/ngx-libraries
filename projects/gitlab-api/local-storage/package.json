@@ -3,7 +3,7 @@
   "peerDependencies": {
     "@angular/common": "^11.2.14",
     "@angular/core": "^11.2.14",
-    "@ngx-pwa/local-storage": "^11.1.0",
+    "@ngx-pwa/local-storage": "^12.1.0",
     "@ngx-library/gitlab-api": "^3.0.0",
     "tslib": "^2.3.0",
     "rxjs": "^6.6.7"
