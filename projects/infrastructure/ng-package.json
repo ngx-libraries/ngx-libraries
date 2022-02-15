@@ -5,20 +5,6 @@
     "karma",
     "commitlint"
   ],
-  "whitelistedNonPeerDependencies": [
-    "@commitlint/*",
-    "@semantic-release/*",
-    "@types/jasmine*",
-    "angular-tslint-rules",
-    "commitlint",
-    "conventional-changelog-conventionalcommits",
-    "husky",
-    "jasmine*",
-    "karma*",
-    "lint-staged",
-    "protractor",
-    "semantic-release"
-  ],
   "lib": {
     "entryFile": "src/public-api.ts"
   }

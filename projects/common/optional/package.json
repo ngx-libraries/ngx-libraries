@@ -1,11 +1,5 @@
 {
   "name": "@ngx-library/common/optional",
   "peerDependencies": {
-  },
-  "ngPackage": {
-    "lib": {
-      "flatModuleFile": "ngx-library-common-optional",
-      "entryFile": "src/public-api.ts"
-    }
   }
 }

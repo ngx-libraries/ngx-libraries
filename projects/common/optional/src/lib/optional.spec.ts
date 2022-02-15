@@ -1,15 +1,15 @@
 import { Optional } from './optional';
 
-// tslint:disable:no-null-keyword
+/* eslint-disable no-null/no-null */
 describe('Optional', () => {
   function isNotValue(value): boolean {
     return value === undefined || value === null;
   }
 
   Object.entries({
-    'defined': { internalValue: {} },
-    'undefined': undefined,
-    'null': null
+    defined: { internalValue: {} },
+    undefined: undefined,
+    null: null
   })
     .map(([ key, value ]) => ({ key, value, optional: Optional.of(value) }))
     .forEach(({key, value, optional}) => {

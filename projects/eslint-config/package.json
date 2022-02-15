@@ -1,0 +1,35 @@
+{
+  "name": "@ngx-library/eslint-config",
+  "version": "5.3.3",
+  "peerDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsdoc": "^37.9.1",
+    "eslint-plugin-no-null": "^1.0.2",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "@typescript-eslint/eslint-plugin": "^5.11.0",
+    "@typescript-eslint/parser": "^5.11.0",
+    "@angular-eslint/builder": "^13.1.0",
+    "@angular-eslint/eslint-plugin": "^13.1.0",
+    "@angular-eslint/eslint-plugin-template": "^13.1.0",
+    "@angular-eslint/schematics": "^13.1.0",
+    "@angular-eslint/template-parser": "^13.1.0"
+  },
+  "homepage": "https://gitlab.com/ngx-library/ngx-library/-/blob/develop/projects/eslint-config",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/ngx-library/ngx-library.git",
+    "directory": "projects/eslint-config"
+  },
+  "exports": {
+    "./configs/*": {
+      "default": "./configs/*.js"
+    }
+  },
+  "dependencies": {
+    "tslib": "2.3.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

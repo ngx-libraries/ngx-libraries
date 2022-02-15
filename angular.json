@@ -3,6 +3,64 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "@ngx-library/eslint-config": {
+      "projectType": "library",
+      "root": "projects/eslint-config",
+      "sourceRoot": "projects/eslint-config",
+      "prefix": "lib",
+      "schematics": {
+        "@schematics/angular:component": {
+          "changeDetection": "OnPush",
+          "style": "scss",
+          "displayBlock": true
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/eslint-config/tsconfig.lib.json",
+            "project": "projects/eslint-config/ng-package.json"
+          },
+          "configurations": {
+            "development": {
+              "tsConfig": "projects/eslint-config/tsconfig.lib.prod.json",
+              "project": "projects/eslint-config/ng-package.prod.json"
+            },
+            "test": {
+              "tsConfig": "projects/eslint-config/tsconfig.lib.prod.json",
+              "project": "projects/eslint-config/ng-package.prod.json"
+            },
+            "stage": {
+              "tsConfig": "projects/eslint-config/tsconfig.lib.prod.json",
+              "project": "projects/eslint-config/ng-package.prod.json"
+            },
+            "production": {
+              "tsConfig": "projects/eslint-config/tsconfig.lib.prod.json",
+              "project": "projects/eslint-config/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/eslint-config/test.ts",
+            "tsConfig": "projects/eslint-config/tsconfig.spec.json",
+            "karmaConfig": "projects/eslint-config/karma.conf.js",
+            "codeCoverage": true
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/eslint-config/**/*.ts",
+              "projects/eslint-config/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "@ngx-library/infrastructure": {
       "projectType": "library",
       "root": "projects/infrastructure",
@@ -47,14 +105,11 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/infrastructure/tsconfig.lib.json",
-              "projects/infrastructure/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "projects/infrastructure/**/*.ts",
+              "projects/infrastructure/**/*.html"
             ]
           }
         }
@@ -104,14 +159,11 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/common/tsconfig.lib.json",
-              "projects/common/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "projects/common/**/*.ts",
+              "projects/common/**/*.html"
             ]
           }
         }
@@ -161,14 +213,11 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/gitlab-api/tsconfig.lib.json",
-              "projects/gitlab-api/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "projects/gitlab-api/**/*.ts",
+              "projects/gitlab-api/**/*.html"
             ]
           }
         }
@@ -232,14 +281,11 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/zip-js/tsconfig.lib.json",
-              "projects/zip-js/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "projects/zip-js/**/*.ts",
+              "projects/zip-js/**/*.html"
             ]
           }
         }
@@ -289,19 +335,19 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/markdownlint/tsconfig.lib.json",
-              "projects/markdownlint/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "projects/markdownlint/**/*.ts",
+              "projects/markdownlint/**/*.html"
             ]
           }
         }
       }
     }
   },
-  "defaultProject": "@ngx-library/common"
+  "defaultProject": "@ngx-library/common",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }

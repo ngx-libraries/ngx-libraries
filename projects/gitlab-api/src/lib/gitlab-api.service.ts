@@ -52,15 +52,16 @@ export class GitlabApiService {
     message: string,
     actions: Action[],
     options?: {
-      startBranch?: string,
-      startSha?: string,
-      startProject?: number | string,
-      authorEmail?: string,
-      authorName?: string,
-      stats?: boolean,
-      force?: boolean
+      startBranch?: string;
+      startSha?: string;
+      startProject?: number | string;
+      authorEmail?: string;
+      authorName?: string;
+      stats?: boolean;
+      force?: boolean;
     }
   ): Observable<any> {
+    /* eslint-disable @typescript-eslint/naming-convention */
     const request = {
       id: encodeURI(projectPath),
       branch,
@@ -85,13 +86,15 @@ export class GitlabApiService {
             headers
           }))
       );
+    /* eslint-enable @typescript-eslint/naming-convention */
   }
 
+  /* eslint-disable @typescript-eslint/naming-convention */
   public getProjectRepositoryTree(
     projectId: string,
-    config?: { path?: string, ref?: string, recursive?: boolean, page?: number, perPage?: number }
+    config?: { path?: string; ref?: string; recursive?: boolean; page?: number; perPage?: number }
   ): Observable<Pagination<File>> {
-    const params: { path?: string, ref?: string, recursive?: string, page?: string, per_page?: string } = {};
+    const params: { path?: string; ref?: string; recursive?: string; page?: string; per_page?: string } = {};
 
     if (config?.path !== undefined) {
       params.path = config.path;
@@ -125,10 +128,11 @@ export class GitlabApiService {
         map(getPaginationFromResponse)
       );
   }
+  /* eslint-enable @typescript-eslint/naming-convention */
 
   public getProjectRepositoryArchive(
     projectId: string,
-    config?: { sha?: string, format?: ArchiveFormat }
+    config?: { sha?: string; format?: ArchiveFormat }
   ): Observable<Blob> {
     const format = config && config.format ? config.format : ArchiveFormat.ZIP;
 

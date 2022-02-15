@@ -9,7 +9,7 @@ variables:
     policy: pull
 
 .image:
-  image: registry.gitlab.com/savushkin.i/environment/builder:alpine
+  image: registry.gitlab.com/savushkin.i/environment/builder:latest
 
 stages:
   - Building dependency
@@ -38,23 +38,6 @@ Linting Angular Projects:
     - .cache
   script:
     - make -f /opt/makefiles/Makefile.monorepo-angular lint
-
-Common Building Angular Libraries:
-  stage: Building libraries and linting projects
-  extends:
-    - .image
-    - .cache
-  dependencies: []
-  before_script:
-    - npm run ci:build:before_script --if-present
-  script:
-    - make -f /opt/makefiles/Makefile.monorepo-angular build
-  after_script:
-    - npm run ci:build:after_script --if-present
-  artifacts:
-    expire_in: 30 days
-    paths:
-      - dist/@ngx-library/
 
 Production Building Angular Libraries:
   stage: Building libraries and linting projects
@@ -85,7 +68,7 @@ Testing Angular Projects:
     SELENIUM_HOST: selemium-standalone-chrome
     SELENIUM_PORT: 4444
   dependencies:
-    - Common Building Angular Libraries
+    - Production Building Angular Libraries
   before_script:
     - npm run ci:test:before_script --if-present
   script:

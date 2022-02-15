@@ -1,17 +1,11 @@
 {
   "name": "@ngx-library/gitlab-api/guard",
   "peerDependencies": {
-    "@angular/common": "^11.2.14",
-    "@angular/core": "^11.2.14",
-    "@angular/router": "^11.2.14",
+    "@angular/common": "^13.2.2",
+    "@angular/core": "^13.2.2",
+    "@angular/router": "^13.2.2",
     "@ngx-library/gitlab-api": "^3.0.0",
     "tslib": "^2.3.1",
-    "rxjs": "^6.6.7"
-  },
-  "ngPackage": {
-    "lib": {
-      "flatModuleFile": "ngx-library-gitlab-api-guard",
-      "entryFile": "src/public-api.ts"
-    }
+    "rxjs": "^7.5.4"
   }
 }

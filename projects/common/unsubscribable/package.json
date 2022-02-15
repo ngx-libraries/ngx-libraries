@@ -1,13 +1,7 @@
 {
   "name": "@ngx-library/common/unsubscribable",
   "peerDependencies": {
-    "@angular/core": "^11.2.14",
-    "rxjs": "^6.6.7"
-  },
-  "ngPackage": {
-    "lib": {
-      "flatModuleFile": "ngx-library-common-unsubscribable",
-      "entryFile": "src/public-api.ts"
-    }
+    "@angular/core": "^13.2.2",
+    "rxjs": "^7.5.4"
   }
 }
