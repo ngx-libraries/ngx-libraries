@@ -4,6 +4,10 @@ export class Optional<TValue> {
 
   private readonly _value: TValue | Nothing;
 
+  private constructor(value: TValue | Nothing) {
+    this._value = value;
+  }
+
   public static of<TOfValue>(value: TOfValue | Nothing): Optional<TOfValue> {
     return new Optional<TOfValue>(value);
   }
@@ -58,9 +62,5 @@ export class Optional<TValue> {
     return Optional.isPresent(this._value)
       ? this._value
       : callback();
-  }
-
-  private constructor(value: TValue | Nothing) {
-    this._value = value;
   }
 }

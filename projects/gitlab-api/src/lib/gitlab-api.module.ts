@@ -12,9 +12,9 @@ export class GitlabApiModule {
     TAuthWriter extends GitlabApiAuthorizationWriter
     >(
     config?: {
-      authorizationReader: Type<TAuthReader>,
-      authorizationWriter: Type<TAuthWriter>,
-      basePath?: string
+      authorizationReader: Type<TAuthReader>;
+      authorizationWriter: Type<TAuthWriter>;
+      basePath?: string;
     }
   ): ModuleWithProviders<GitlabApiModule> {
     return {

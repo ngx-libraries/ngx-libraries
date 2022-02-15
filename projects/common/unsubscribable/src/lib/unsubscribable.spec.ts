@@ -11,7 +11,7 @@ import { Unsubscribable } from './unsubscribable';
 class TestUnsubscribableComponent extends Unsubscribable {
   public destroy = this._destroy.asObservable();
 
-  // tslint:disable-next-line:unnecessary-constructor
+  // eslint-disable-next-line no-useless-constructor
   constructor() {
     super();
   }
@@ -21,7 +21,7 @@ class TestUnsubscribableComponent extends Unsubscribable {
 class TestUnsubscribableService extends Unsubscribable {
   public destroy = this._destroy.asObservable();
 
-  // tslint:disable-next-line:unnecessary-constructor
+  // eslint-disable-next-line no-useless-constructor
   constructor() {
     super();
   }
@@ -73,7 +73,7 @@ describe('Unsubscribable', () => {
       .destroy
       .subscribe(successSpy, errorSpy, completeSpy);
 
-    // tslint:disable-next-line:no-lifecycle-call
+    // eslint-disable-next-line @angular-eslint/no-lifecycle-call
     service.ngOnDestroy();
 
     expect(successSpy).toHaveBeenCalledWith(undefined);
