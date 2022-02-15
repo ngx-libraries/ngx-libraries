@@ -3,11 +3,5 @@
   "peerDependencies": {
     "@angular/core": "^13.2.2",
     "rxjs": "^7.5.4"
-  },
-  "ngPackage": {
-    "lib": {
-      "flatModuleFile": "ngx-library-common-unsubscribable",
-      "entryFile": "src/public-api.ts"
-    }
   }
 }

@@ -23,8 +23,21 @@
             "project": "projects/eslint-config/ng-package.json"
           },
           "configurations": {
-            "prod": {
-              "tsConfig": "projects/eslint-config/tsconfig.lib.prod.json"
+            "development": {
+              "tsConfig": "projects/eslint-config/tsconfig.lib.prod.json",
+              "project": "projects/eslint-config/ng-package.prod.json"
+            },
+            "test": {
+              "tsConfig": "projects/eslint-config/tsconfig.lib.prod.json",
+              "project": "projects/eslint-config/ng-package.prod.json"
+            },
+            "stage": {
+              "tsConfig": "projects/eslint-config/tsconfig.lib.prod.json",
+              "project": "projects/eslint-config/ng-package.prod.json"
+            },
+            "production": {
+              "tsConfig": "projects/eslint-config/tsconfig.lib.prod.json",
+              "project": "projects/eslint-config/ng-package.prod.json"
             }
           }
         },

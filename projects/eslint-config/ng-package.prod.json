@@ -1,7 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/@ngx-library/eslint-config",
-  "deleteDestPath": false,
   "assets": [
     "./configs/"
   ],
