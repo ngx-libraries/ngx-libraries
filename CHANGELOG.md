@@ -1,3 +1,16 @@
+### [3.0.1](https://gitlab.com/ngx-library/ngx-library/compare/v3.0.0...v3.0.1) (2022-02-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** use angular v13
+* **deps:** use angular v12
+
+### Build System
+
+* **deps:** update angular to v12 ([448cf09](https://gitlab.com/ngx-library/ngx-library/commit/448cf09b0bbe9a270df213b7fcfc9c2386bc223b))
+* **deps:** update angular to v13 ([5961006](https://gitlab.com/ngx-library/ngx-library/commit/596100638aae7a3285f60a08ae41f42a2edd0502))
+
 ## [3.0.0](https://gitlab.com/ngx-library/ngx-library/compare/v2.0.0...v3.0.0) (2020-11-27)
 
 

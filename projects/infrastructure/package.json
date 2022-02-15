@@ -1,6 +1,6 @@
 {
   "name": "@ngx-library/infrastructure",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "peerDependencies": {
     "@angular-devkit/core": "^13.2.3",
     "@angular-devkit/schematics": "^13.2.3",
