@@ -4,59 +4,54 @@
     ":separateMajorReleases",
     ":combinePatchMinorReleases",
     ":ignoreUnstable",
-    ":prImmediately",
+    ":prNotPending",
+    ":rebaseStalePrs",
     ":semanticCommits",
+    ":semanticCommitType(build)",
     ":semanticCommitScope(deps)",
     ":updateNotScheduled",
     ":automergeMinor",
-    ":automergePr",
+    ":automergeBranch",
     ":ignoreModulesAndTests",
     ":maintainLockFilesDisabled",
     ":autodetectPinVersions",
     ":disableRateLimiting",
+    ":assignAndReview(savushkin.i)",
     "group:monorepos",
     "group:recommended",
-    "helpers:disableTypesNodeMajor",
-    ":assignAndReview(savushkin.i)"
+    "helpers:disableTypesNodeMajor"
   ],
   "commitMessageTopic": "{{depName}}",
-  "baseBranches": [
-    "develop"
-  ],
+  "baseBranches": ["develop"],
   "packageRules": [
     {
-      "packageNames": [
-        "typescript"
-      ],
+      "matchPackageNames": ["husky"],
       "separateMinorPatch": true
     },
     {
-      "packageNames": [
-        "typescript"
-      ],
-      "updateTypes": [
-        "minor",
-        "major"
-      ],
+      "matchPackageNames": ["husky"],
+      "matchUpdateTypes": ["major"],
       "enabled": false
     },
     {
-      "depTypeList": [
-        "peerDependencies"
-      ],
+      "matchPackageNames": ["typescript"],
+      "separateMinorPatch": true
+    },
+    {
+      "matchPackageNames": ["typescript"],
+      "matchUpdateTypes": ["minor","major"],
+      "automerge": false
+    },
+    {
+      "matchDepTypes": ["peerDependencies"],
       "rangeStrategy": "bump"
     },
     {
-      "packagePatterns": [
-        "*"
+      "matchSourceUrlPrefixes": [
+        "https://github.com/angular/angular-cli",
+        "https://github.com/angular/angular"
       ],
-      "semanticCommitType": "chore"
-    },
-    {
-      "depTypeList": [
-        "dependencies"
-      ],
-      "semanticCommitType": "build"
+      "groupName": "Angular packages"
     }
   ]
 }
