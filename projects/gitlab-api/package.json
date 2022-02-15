@@ -2,9 +2,9 @@
   "name": "@ngx-library/gitlab-api",
   "version": "3.0.0",
   "peerDependencies": {
-    "@angular/common": "^12.2.16",
-    "@angular/core": "^12.2.16",
-    "rxjs": "^6.6.7"
+    "@angular/common": "^13.2.2",
+    "@angular/core": "^13.2.2",
+    "rxjs": "^7.5.4"
   },
   "homepage": "https://gitlab.com/ngx-library/ngx-library/-/blob/develop/projects/gitlab-api",
   "repository": {
