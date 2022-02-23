@@ -2,8 +2,8 @@
   "name": "@ngx-library/infrastructure",
   "version": "3.0.1",
   "peerDependencies": {
-    "@angular-devkit/core": "^13.2.4",
-    "@angular-devkit/schematics": "^13.2.4",
+    "@angular-devkit/core": "^13.2.5",
+    "@angular-devkit/schematics": "^13.2.5",
     "@commitlint/config-conventional": "^16.2.1",
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/exec": "^6.0.3",
