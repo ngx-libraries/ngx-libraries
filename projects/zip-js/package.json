@@ -4,7 +4,7 @@
   "peerDependencies": {
     "@angular/common": "^13.2.5",
     "@angular/core": "^13.2.5",
-    "rxjs": "^7.5.4",
+    "rxjs": "^7.5.5",
     "zip-js": "^0.0.2"
   },
   "homepage": "https://gitlab.com/ngx-library/ngx-library/-/blob/develop/projects/zip-js",
