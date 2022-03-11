@@ -2,7 +2,7 @@
   "name": "@ngx-library/eslint-config",
   "version": "3.0.1",
   "peerDependencies": {
-    "eslint": "^8.10.0",
+    "eslint": "^8.11.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jsdoc": "^37.9.7",
     "eslint-plugin-no-null": "^1.0.2",
