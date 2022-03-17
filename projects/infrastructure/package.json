@@ -26,7 +26,7 @@
     "karma-junit-reporter": "^2.0.1",
     "karma-spec-reporter": "^0.0.33",
     "karma-webdriver-launcher": "^1.0.8",
-    "lint-staged": "^12.3.6",
+    "lint-staged": "^12.3.7",
     "ngx-build-plus": "^13.0.1",
     "nyc": "^15.1.0",
     "protractor": "^7.0.0",
