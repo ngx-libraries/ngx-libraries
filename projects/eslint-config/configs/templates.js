@@ -21,7 +21,7 @@ module.exports = {
     '@angular-eslint/template/cyclomatic-complexity': [
       'error',
       {
-        'maxComplexity': 10
+        'maxComplexity': 15
       }
     ],
     '@angular-eslint/template/i18n': 'off',

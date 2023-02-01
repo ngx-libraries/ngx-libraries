@@ -1,15 +1,5 @@
 variables:
-  NODE_OPTIONS: --max-old-space-size=2560
-
-.cache:
-  cache:
-    key: ${CI_COMMIT_REF_SLUG}-npm-dependency
-    paths:
-      - node_modules/
-    policy: pull
-
-.image:
-  image: registry.gitlab.com/savushkin.i/environment/builder:latest
+  RELEASE_BRANCH: develop
 
 stages:
   - Building dependency
@@ -21,36 +11,33 @@ stages:
 include:
   - project: savushkin.i/environment
     ref: master
-    file: templates/gitlab-ci/job-templates/npm-job-templates.yml
+    file: templates/gitlab-ci/pipeline-templates/environments.yml
 
-Linting Commit Message:
-  stage: Building libraries and linting projects
-  extends:
-    - .image
-    - .cache
-  script:
-    - echo "$CI_COMMIT_MESSAGE" | $(npm bin)/commitlint
+  - project: savushkin.i/environment
+    ref: master
+    file: templates/gitlab-ci/job-templates/dependencies-job-templates.yml
+
+  - project: savushkin.i/environment
+    ref: master
+    file: templates/gitlab-ci/job-templates/commitlint-job-templates.yml
+
+  - project: savushkin.i/environment
+    ref: master
+    file: templates/gitlab-ci/job-templates/angular-job-templates.yml
 
 Linting Angular Projects:
   stage: Building libraries and linting projects
   extends:
-    - .image
-    - .cache
+    - .ng:lint
   script:
     - make -f /opt/makefiles/Makefile.monorepo-angular lint
 
 Production Building Angular Libraries:
   stage: Building libraries and linting projects
   extends:
-    - .image
-    - .cache
-  dependencies: []
-  before_script:
-    - npm run ci:build:before_script --if-present
+    - .ng:build
   script:
-    - make -f /opt/makefiles/Makefile.monorepo-angular build-producation
-  after_script:
-    - npm run ci:build:after_script --if-present
+    - make -f /opt/makefiles/Makefile.monorepo-angular build-production
   artifacts:
     expire_in: 30 days
     paths:
@@ -58,49 +45,32 @@ Production Building Angular Libraries:
 
 Testing Angular Projects:
   stage: Building and testing projects
-  services:
-    - name: selenium/standalone-chrome:latest
-      alias: selemium-standalone-chrome
   extends:
-    - .image
-    - .cache
-  variables:
-    SELENIUM_HOST: selemium-standalone-chrome
-    SELENIUM_PORT: 4444
+    - .ng:test
   dependencies:
     - Production Building Angular Libraries
-  before_script:
-    - npm run ci:test:before_script --if-present
   script:
     - make -f /opt/makefiles/Makefile.monorepo-angular test
-  after_script:
-    - npm run ci:test:after_script --if-present
-    - make -f /opt/makefiles/Makefile.coverage
-  coverage: '/Statements.*?(\d+(?:\.\d+)?)%/'
-  artifacts:
-    reports:
-      junit:
-        - junit-report/**/TESTS*.xml
-    expire_in: 30 days
-    when: always
-    paths:
-      - coverage/
 
 Semantic Release:
   stage: Publish artifacts
-  extends:
-    - .image
-    - .cache
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}-dependency
+    paths:
+      - node_modules/
+    policy: pull
+  image: registry.gitlab.com/savushkin.i/environment/builder:latest
   variables:
     GIT_STRATEGY: clone
     GITLAB_URL: https://$CI_SERVER_HOST
     GIT_AUTHOR_NAME: $GITLAB_USER_NAME
     GIT_AUTHOR_EMAIL: $GITLAB_USER_EMAIL
-    GIT_COMMITTER_NAME: Medzoom Staff
-    GIT_COMMITTER_EMAIL: medzoom-staff@medindex.ru
-    NPM_CONFIG_REGISTRY: https://$NPM_REGISTRY_URL
-    NPM_TOKEN: $NPM_REGISTRY_TOKEN
+    GIT_COMMITTER_NAME: Mishka Assistant
+    GIT_COMMITTER_EMAIL: assistant@savushkin.me
+    NPM_CONFIG_REGISTRY: https://${NPM_REGISTRY_URL}
+    NPM_TOKEN: ${NPM_REGISTRY_TOKEN}
   dependencies:
+    - Dependency installation
     - Production Building Angular Libraries
   when: manual
   before_script:

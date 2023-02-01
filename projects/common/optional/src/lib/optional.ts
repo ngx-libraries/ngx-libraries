@@ -22,7 +22,8 @@ export class Optional<TValue> {
 
   public flatMap<TResult>(mapper: (value: TValue) => Optional<TResult>): Optional<TResult> {
     return Optional.isPresent(this._value)
-      ? Optional.of<TResult>(mapper(this._value).get())
+      ? Optional.of<TResult>(mapper(this._value)
+        .get())
       : Optional.empty<TResult>();
   }
 

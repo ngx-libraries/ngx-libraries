@@ -17,38 +17,47 @@ export class ZipService {
     zip.workerScriptsPath = this._workerScriptsPath;
   }
 
-  private static getData<T>(writer, entry: ZipEntry): ZipTask<T> {
-    const progress = new Subject<ZipTaskProgress>();
+  private static getData<T>(writer: any, entry: ZipEntry): ZipTask<T> {
+    const progress = new Subject<ZipTaskProgress | undefined>();
 
     const data = new Observable<T>((subscriber) => {
       (entry as any).getData(
         writer,
-        (blob) => {
+        (blob: any) => {
           subscriber.next(blob);
           subscriber.complete();
           progress.next(undefined);
         },
-        (current, total) => {
-          progress.next({ active: true, current, total });
+        (current: any, total: any) => {
+          progress.next({
+            active: true,
+            current,
+            total
+          });
         }
       );
     });
 
-    return { progress, data };
+    return {
+      progress,
+      data
+    };
   }
 
-  public getEntries(file): Observable<Array<ZipEntry>> {
+  public getEntries(file: any): Observable<Array<ZipEntry>> {
     return new Observable((subscriber) => {
       const reader = new zip.BlobReader(file);
 
       zip.createReader(
         reader,
-        (zipReader) => zipReader.getEntries((entries) => {
+        (zipReader: any) => zipReader.getEntries((entries: any) => {
           subscriber.next(entries);
           subscriber.complete();
         }),
-        (message) => {
-          subscriber.error({ message });
+        (message: any) => {
+          subscriber.error({
+            message
+          });
         }
       );
     });

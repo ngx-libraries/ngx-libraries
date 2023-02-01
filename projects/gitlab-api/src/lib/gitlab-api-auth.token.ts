@@ -1,12 +1,7 @@
 import { InjectionToken } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
-import {
-  GitlabApiAuth,
-  GitlabApiAuthorizationReader,
-  GitlabApiAuthorizationWriter,
-  GitlabApiAuthType
-} from './models/auth.model';
+import { GitlabApiAuth, GitlabApiAuthorizationReader, GitlabApiAuthorizationWriter, GitlabApiAuthType } from './models/auth.model';
 
 export const GITLAB_API_READ_AUTHORIZATION = new InjectionToken<GitlabApiAuthorizationReader>(
   '[@ngx-library/gitlab-api] GITLAB_API_READ_AUTHORIZATION',

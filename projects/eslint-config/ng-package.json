@@ -3,7 +3,17 @@
   "dest": "../../dist/@ngx-library/eslint-config",
   "deleteDestPath": false,
   "assets": [
-    "./configs/"
+    "./configs/**/*"
+  ],
+  "allowedNonPeerDependencies": [
+    "@typescript-eslint/eslint-plugin",
+    "@typescript-eslint/parser",
+    "eslint",
+    "eslint-plugin-import",
+    "eslint-plugin-import-newlines",
+    "eslint-plugin-jsdoc",
+    "eslint-plugin-no-null",
+    "eslint-plugin-prefer-arrow"
   ],
   "lib": {
     "entryFile": "src/public-api.ts"

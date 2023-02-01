@@ -16,6 +16,7 @@
       },
       "extends": [
         "../eslint-config/configs/typescript",
+        "../eslint-config/configs/typescript-codestyle",
         "../eslint-config/configs/typescript-weak"
       ],
       "rules": {

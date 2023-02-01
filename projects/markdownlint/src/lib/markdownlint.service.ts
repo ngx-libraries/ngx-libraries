@@ -8,33 +8,33 @@ import { MarkdownlintResult } from './models/markdownlint-result.model';
 declare const markdownlint: any;
 
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root'
 })
 export class MarkdownlintService {
 
-    constructor(
-        private readonly _markdownlintOptionsService: MarkdownlintOptionsService
-    ) { }
+  constructor(
+    private readonly _markdownlintOptionsService: MarkdownlintOptionsService
+  ) { }
 
-    public lint(content): Observable<MarkdownlintResult[]> {
-        return this._markdownlintOptionsService.options
-            .pipe(
-                first(),
-                switchMap((options) => new Observable<MarkdownlintResult[]>((subscriber) => {
-                    markdownlint({
-                        ...options,
-                        strings: {
-                            content
-                        }
-                    }, (err, result) => {
-                        if (!err) {
-                            subscriber.next(result.content);
-                            subscriber.complete();
-                        } else {
-                            subscriber.error(result);
-                        }
-                    });
-                }))
-            );
-    }
+  public lint(content: any): Observable<MarkdownlintResult[]> {
+    return this._markdownlintOptionsService.options
+      .pipe(
+        first(),
+        switchMap((options) => new Observable<MarkdownlintResult[]>((subscriber) => {
+          markdownlint({
+            ...options,
+            strings: {
+              content
+            }
+          }, (err: any, result: any) => {
+            if (!err) {
+              subscriber.next(result.content);
+              subscriber.complete();
+            } else {
+              subscriber.error(result);
+            }
+          });
+        }))
+      );
+  }
 }

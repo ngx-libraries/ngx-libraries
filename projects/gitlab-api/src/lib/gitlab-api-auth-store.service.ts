@@ -2,16 +2,8 @@ import { Inject, Injectable } from '@angular/core';
 import { Observable, ReplaySubject } from 'rxjs';
 import { first, tap } from 'rxjs/operators';
 
-import {
-  GITLAB_API_READ_AUTHORIZATION,
-  GITLAB_API_WRITE_AUTHORIZATION
-} from './gitlab-api-auth.token';
-import {
-  GitlabApiAuth,
-  GitlabApiAuthorizationReader,
-  GitlabApiAuthorizationWriter,
-  GitlabApiAuthType
-} from './models/auth.model';
+import { GITLAB_API_READ_AUTHORIZATION, GITLAB_API_WRITE_AUTHORIZATION } from './gitlab-api-auth.token';
+import { GitlabApiAuth, GitlabApiAuthorizationReader, GitlabApiAuthorizationWriter, GitlabApiAuthType } from './models/auth.model';
 
 @Injectable()
 export class GitlabApiAuthStoreService {

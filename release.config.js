@@ -1,50 +1,43 @@
-const angular = require('./angular.json');
+const {
+  releaseCommon,
+  releaseNPM,
+  releaseGit
+} = require('./projects/infrastructure/semantic-release/common');
 
-const preset = 'conventionalcommits';
-
-const libraries = Object.entries(angular.projects)
+const libraries = Object.entries(require('./angular.json').projects)
   .filter(([ , { projectType }]) => projectType === 'library')
   .map(([ project ]) => project.replace(/^@ngx-library\//, ''));
 
-const branches = [
-  {
-    name: 'develop'
-  }
-];
+const {
+  RELEASE_BRANCH
+} = process.env;
 
 const plugins = [
-  ['@semantic-release/commit-analyzer', {
-    'preset': preset,
-    'releaseRules': [
-      {'type': 'build', 'scope': 'deps', 'release': 'patch'}
-    ]
+  ...releaseCommon(),
+  ...libraries.map((library) => releaseNPM(`@ngx-library/${library}`)),
+  ['@semantic-release/exec', {
+    prepareCmd: 'node projects/infrastructure/versions/adjust-versions.js'
   }],
-  ['@semantic-release/release-notes-generator', {
-    'preset': preset,
-  }],
-  '@semantic-release/changelog',
-  ...libraries.map((title) => ['@semantic-release/npm', {
-    'pkgRoot': `dist/@ngx-library/${title}`,
-  }]),
-  ...libraries.map((title) => ['@semantic-release/npm', {
-    'npmPublish': false,
-    'pkgRoot': `projects/${title}`,
-  }]),
-  ['@semantic-release/npm', {
-    'npmPublish': false,
-    'pkgRoot': '.',
-  }],
-  ["@semantic-release/git", {
-    "assets": [
-      'CHANGELOG.md',
-      'package.json',
-      ...libraries.map((title) => `projects/${title}/package.json`)
+  ...releaseGit(
+    [
+      'projects/**/package.json'
     ],
-  }],
-  '@semantic-release/gitlab'
+    'chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
+    [
+      ...libraries.map((library) => ({
+        url: `https://www.npmjs.com/package/@ngx-library/${library}/v/\${nextRelease.version}`,
+        label: `@ngx-library/${library}@\${nextRelease.version}`,
+        type: 'package'
+      }))
+    ]
+  )
 ];
 
 module.exports = {
-  branches,
+  branches: [
+    {
+      name: RELEASE_BRANCH
+    }
+  ],
   plugins
 };

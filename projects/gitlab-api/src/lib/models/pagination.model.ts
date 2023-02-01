@@ -30,7 +30,7 @@ export function getPaginationFromResponse<T>(response: HttpResponse<T[]>): Pagin
     perPage: Number(perPage),
     nextPage: Number(nextPage),
     prevPage: Number(prevPage),
-    content
+    content: content ?? []
   };
 }
 
@@ -42,7 +42,9 @@ export function getAllPagesRecursive<T>(
     .pipe(
       switchMap((response) => {
         const requests = [
-          of([response])
+          of([
+            response
+          ])
         ];
 
         if (response.nextPage !== 0) {
@@ -52,9 +54,12 @@ export function getAllPagesRecursive<T>(
         return forkJoin(requests);
       }),
       map((responses) => responses.length > 1
-        ? [...responses[0], ...responses[1]]
-        : [...responses[0] ]
-      )
+        ? [
+          ...responses[0], ...responses[1]
+        ]
+        : [
+          ...responses[0]
+        ])
     );
 }
 

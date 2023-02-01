@@ -1,6 +1,24 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
+  "cli": {
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "changeDetection": "OnPush",
+      "style": "scss",
+      "displayBlock": true
+    },
+    "@angular-eslint/schematics:application": {
+      "setParserOptionsProject": true
+    },
+    "@angular-eslint/schematics:library": {
+      "setParserOptionsProject": true
+    }
+  },
   "newProjectRoot": "projects",
   "projects": {
     "@ngx-library/eslint-config": {
@@ -8,13 +26,6 @@
       "root": "projects/eslint-config",
       "sourceRoot": "projects/eslint-config",
       "prefix": "lib",
-      "schematics": {
-        "@schematics/angular:component": {
-          "changeDetection": "OnPush",
-          "style": "scss",
-          "displayBlock": true
-        }
-      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
@@ -45,6 +56,10 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "main": "projects/eslint-config/test.ts",
+            "polyfills": [
+              "zone.js/testing",
+              "zone.js"
+            ],
             "tsConfig": "projects/eslint-config/tsconfig.spec.json",
             "karmaConfig": "projects/eslint-config/karma.conf.js",
             "codeCoverage": true
@@ -96,6 +111,10 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "main": "projects/infrastructure/test.ts",
+            "polyfills": [
+              "zone.js/testing",
+              "zone.js"
+            ],
             "tsConfig": "projects/infrastructure/tsconfig.spec.json",
             "karmaConfig": "projects/infrastructure/karma.conf.js",
             "codeCoverageExclude": [
@@ -150,6 +169,10 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "main": "projects/common/test.ts",
+            "polyfills": [
+              "zone.js/testing",
+              "zone.js"
+            ],
             "tsConfig": "projects/common/tsconfig.spec.json",
             "karmaConfig": "projects/common/karma.conf.js",
             "codeCoverageExclude": [
@@ -204,6 +227,10 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "main": "projects/gitlab-api/test.ts",
+            "polyfills": [
+              "zone.js/testing",
+              "zone.js"
+            ],
             "tsConfig": "projects/gitlab-api/tsconfig.spec.json",
             "karmaConfig": "projects/gitlab-api/karma.conf.js",
             "codeCoverageExclude": [
@@ -258,6 +285,10 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "main": "projects/zip-js/test.ts",
+            "polyfills": [
+              "zone.js/testing",
+              "zone.js"
+            ],
             "tsConfig": "projects/zip-js/tsconfig.spec.json",
             "karmaConfig": "projects/zip-js/karma.conf.js",
             "codeCoverageExclude": [
@@ -326,6 +357,10 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "main": "projects/markdownlint/test.ts",
+            "polyfills": [
+              "zone.js/testing",
+              "zone.js"
+            ],
             "tsConfig": "projects/markdownlint/tsconfig.spec.json",
             "karmaConfig": "projects/markdownlint/karma.conf.js",
             "codeCoverageExclude": [
@@ -345,9 +380,5 @@
         }
       }
     }
-  },
-  "defaultProject": "@ngx-library/common",
-  "cli": {
-    "defaultCollection": "@angular-eslint/schematics"
   }
 }

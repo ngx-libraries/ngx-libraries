@@ -14,6 +14,7 @@ describe('GitlabApiTokenRequiredGuard', () => {
   it('should create', () => {
     const service = TestBed.inject(LocalStorageGitlabApiAuthorizationReaderWriterService);
 
-    expect(service).toBeTruthy();
+    expect(service)
+      .toBeTruthy();
   });
 });

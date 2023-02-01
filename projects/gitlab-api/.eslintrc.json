@@ -9,13 +9,14 @@
       ],
       "parserOptions": {
         "project": [
-          "projects/gitlab-api/tsconfig.lib.json",
-          "projects/gitlab-api/tsconfig.spec.json"
+          "projects/eslint-config/tsconfig.lib.json",
+          "projects/eslint-config/tsconfig.spec.json"
         ],
         "createDefaultProgram": true
       },
       "extends": [
         "../eslint-config/configs/typescript",
+        "../eslint-config/configs/typescript-codestyle",
         "../eslint-config/configs/typescript-weak"
       ],
       "rules": {
@@ -44,8 +45,8 @@
       "parser": "@angular-eslint/template-parser",
       "parserOptions": {
         "project": [
-          "projects/gitlab-api/tsconfig.lib.json",
-          "projects/gitlab-api/tsconfig.spec.json"
+          "projects/eslint-config/tsconfig.lib.json",
+          "projects/eslint-config/tsconfig.spec.json"
         ],
         "createDefaultProgram": true
       },

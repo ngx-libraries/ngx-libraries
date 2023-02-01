@@ -2,8 +2,42 @@
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/@ngx-library/infrastructure",
   "assets": [
+    "commitlint/**/*",
+    "karma/**/*",
+    "semantic-release/**/*",
+    "stylelint/**/*",
+    "versions/**/*"
+  ],
+  "allowedNonPeerDependencies": [
+    "@commitlint/config-conventional",
+    "@semantic-release/changelog",
+    "@semantic-release/exec",
+    "@semantic-release/git",
+    "@semantic-release/gitlab",
+    "@sentry/angular",
+    "@sentry/cli",
+    "@sentry/tracing",
+    "@types/jasmine",
+    "@types/node",
+    "commitlint",
+    "conventional-changelog-conventionalcommits",
+    "glob",
+    "husky",
+    "ip",
+    "jasmine-core",
     "karma",
-    "commitlint"
+    "karma-chrome-launcher",
+    "karma-coverage",
+    "karma-jasmine",
+    "karma-jasmine-html-reporter",
+    "karma-junit-reporter",
+    "karma-spec-reporter",
+    "lint-staged",
+    "selenium-webdriver",
+    "semantic-release",
+    "stylelint",
+    "stylelint-config-standard-scss",
+    "webpack-bundle-analyzer"
   ],
   "lib": {
     "entryFile": "src/public-api.ts"

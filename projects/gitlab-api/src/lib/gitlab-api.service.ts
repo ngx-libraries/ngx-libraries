@@ -14,13 +14,15 @@ export const GITLAB_API_BASE_PATH = new InjectionToken('GITLAB_API_BASE_PATH');
 
 function buildOptionalParams(params: { [key: string]: any }): any {
   return Object.entries(params)
-    .reduce((obj, [key, value]) => {
-      if (value !== undefined) {
-        obj[key] = value;
-      }
+    .reduce<any>((obj, [
+    key, value
+  ]) => {
+    if (value !== undefined) {
+      obj[key] = value;
+    }
 
-      return obj;
-    }, {});
+    return obj;
+  }, {});
 }
 
 @Injectable()
@@ -40,7 +42,9 @@ export class GitlabApiService {
         first(),
         switchMap(({ authHeaders: headers }) => this._httpClient.get(
           PROJECTS_RESOURCES.PROJECTS(undefined, this._basePath),
-          { headers }
+          {
+            headers
+          }
         ))
       );
   }
@@ -121,10 +125,10 @@ export class GitlabApiService {
         first(),
         switchMap(({ authHeaders: headers }) => this._httpClient
           .get<File[]>(PROJECTS_RESOURCES.REPOSITORY_TREE(projectId, this._basePath), {
-            params,
-            observe: 'response',
-            headers
-          })),
+          params,
+          observe: 'response',
+          headers
+        })),
         map(getPaginationFromResponse)
       );
   }
@@ -159,7 +163,9 @@ export class GitlabApiService {
     filePath: string,
     ref: string
   ): Observable<string> {
-    const params: { ref: string } = { ref };
+    const params: { ref: string } = {
+      ref
+    };
 
     return this._gitlabApiAuthService.auth
       .pipe(

@@ -10,8 +10,8 @@ export class GitlabApiModule {
   public static forRoot<
     TAuthReader extends GitlabApiAuthorizationReader,
     TAuthWriter extends GitlabApiAuthorizationWriter
-    >(
-    config?: {
+  >(
+    config: {
       authorizationReader: Type<TAuthReader>;
       authorizationWriter: Type<TAuthWriter>;
       basePath?: string;
@@ -20,9 +20,18 @@ export class GitlabApiModule {
     return {
       ngModule: GitlabApiModule,
       providers: [
-        { provide: GITLAB_API_BASE_PATH, useValue: config?.basePath ?? '/api/v4' },
-        { provide: GITLAB_API_READ_AUTHORIZATION, useClass: config?.authorizationReader },
-        { provide: GITLAB_API_WRITE_AUTHORIZATION, useClass: config?.authorizationWriter },
+        {
+          provide: GITLAB_API_BASE_PATH,
+          useValue: config?.basePath ?? '/api/v4'
+        },
+        {
+          provide: GITLAB_API_READ_AUTHORIZATION,
+          useClass: config.authorizationReader
+        },
+        {
+          provide: GITLAB_API_WRITE_AUTHORIZATION,
+          useClass: config.authorizationWriter
+        },
         GitlabApiAuthStoreService,
         GitlabApiService
       ]

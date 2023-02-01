@@ -42,28 +42,12 @@ module.exports = {
       'error',
       'as-needed'
     ],
-    'arrow-parens': 'off',
-    'comma-dangle': 'off',
     'complexity': 'off',
     'id-blacklist': 'off',
-    'max-len': [
-      'error',
-      {
-        'code': 280,
-        'ignorePattern': '^import'
-      }
-    ],
     'no-empty': 'off',
     'no-invalid-this': 'off',
-    'no-multiple-empty-lines': [
-      'error',
-      {
-        'max': 1
-      }
-    ],
     'no-null/no-null': 'off',
     'no-plusplus': 'off',
-    'no-underscore-dangle': 'off',
     'object-shorthand': 'off',
     'prefer-arrow/prefer-arrow-functions': 'off'
   }

@@ -16,7 +16,8 @@ module.exports = {
     'eslint-plugin-import',
     'eslint-plugin-jsdoc',
     'eslint-plugin-no-null',
-    'eslint-plugin-prefer-arrow'
+    'eslint-plugin-prefer-arrow',
+    'import-newlines'
   ],
   'rules': {
     '@angular-eslint/component-class-suffix': 'error',
@@ -202,7 +203,7 @@ module.exports = {
       '1tbs'
     ],
     'class-methods-use-this': 'off',
-    'comma-dangle': 'error',
+    'comma-dangle': ['error', 'never'],
     'complexity': [
       'error',
       {
@@ -258,7 +259,10 @@ module.exports = {
     'max-len': [
       'error',
       {
-        'code': 280
+        'code': 140,
+        'ignoreUrls': true,
+        'ignoreStrings': true,
+        'ignoreTemplateLiterals': true,
       }
     ],
     'max-lines': [
@@ -266,7 +270,6 @@ module.exports = {
       400
     ],
     'new-parens': 'error',
-    'newline-per-chained-call': 'off',
     'no-bitwise': 'error',
     'no-caller': 'error',
     'no-cond-assign': 'error',
@@ -304,7 +307,6 @@ module.exports = {
     'no-extra-bind': 'error',
     'no-fallthrough': 'error',
     'no-invalid-this': 'error',
-    'no-multiple-empty-lines': 'error',
     'no-new-func': 'error',
     'no-new-wrappers': 'error',
     'no-null/no-null': 'error',
@@ -329,7 +331,12 @@ module.exports = {
     'no-throw-literal': 'error',
     'no-trailing-spaces': 'error',
     'no-undef-init': 'error',
-    'no-underscore-dangle': 'error',
+    'no-underscore-dangle': [
+      'error',
+      {
+        'allowAfterThis': true
+      }
+    ],
     'no-unsafe-finally': 'error',
     'no-unused-labels': 'error',
     'no-useless-constructor': 'off',

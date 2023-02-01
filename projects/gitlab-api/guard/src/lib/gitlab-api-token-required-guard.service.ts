@@ -1,5 +1,11 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, CanActivateChild, RouterStateSnapshot, UrlTree } from '@angular/router';
+import {
+  ActivatedRouteSnapshot,
+  CanActivate,
+  CanActivateChild,
+  RouterStateSnapshot,
+  UrlTree
+} from '@angular/router';
 import { GitlabApiAuthStoreService } from '@ngx-library/gitlab-api';
 import { Observable, race, timer } from 'rxjs';
 import { defaultIfEmpty, first, map } from 'rxjs/operators';
@@ -22,8 +28,7 @@ export class GitlabApiTokenRequiredGuard implements CanActivate, CanActivateChil
         first(),
         map((arg) => typeof arg === 'number'
           ? arg !== 0
-          : arg !== undefined
-        ),
+          : arg !== undefined),
         defaultIfEmpty(false)
       );
   }

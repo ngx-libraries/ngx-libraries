@@ -32,14 +32,17 @@ describe('Unsubscribable', () => {
   beforeEach(() =>
     TestBed
       .configureTestingModule({
-        declarations: [TestUnsubscribableComponent],
-        schemas: [NO_ERRORS_SCHEMA],
+        declarations: [
+          TestUnsubscribableComponent
+        ],
+        schemas: [
+          NO_ERRORS_SCHEMA
+        ],
         providers: [
           TestUnsubscribableService
         ]
       })
-      .compileComponents()
-  );
+      .compileComponents());
 
   it('should destroy component and complete observable', () => {
     const fixture = TestBed.createComponent(TestUnsubscribableComponent);
@@ -57,9 +60,11 @@ describe('Unsubscribable', () => {
 
     fixture.destroy();
 
-    expect(successSpy).toHaveBeenCalledWith(undefined);
+    expect(successSpy)
+      .toHaveBeenCalledWith(undefined);
     expect(errorSpy).not.toHaveBeenCalled();
-    expect(completeSpy).toHaveBeenCalledWith();
+    expect(completeSpy)
+      .toHaveBeenCalledWith();
   });
 
   it('should destroy service and complete observable', () => {
@@ -76,8 +81,10 @@ describe('Unsubscribable', () => {
     // eslint-disable-next-line @angular-eslint/no-lifecycle-call
     service.ngOnDestroy();
 
-    expect(successSpy).toHaveBeenCalledWith(undefined);
+    expect(successSpy)
+      .toHaveBeenCalledWith(undefined);
     expect(errorSpy).not.toHaveBeenCalled();
-    expect(completeSpy).toHaveBeenCalledWith();
+    expect(completeSpy)
+      .toHaveBeenCalledWith();
   });
 });

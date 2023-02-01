@@ -19,10 +19,14 @@ export class GitlabApiAuth {
     /* eslint-disable @typescript-eslint/naming-convention */
     switch (this.type) {
       case GitlabApiAuthType.O_AUTH_2:
-        this.authHeaders = new HttpHeaders({ Authorization: `Bearer ${this.token}` });
+        this.authHeaders = new HttpHeaders({
+          Authorization: `Bearer ${this.token}`
+        });
         break;
       case GitlabApiAuthType.PERSONAL_ACCESS_TOKEN:
-        this.authHeaders = new HttpHeaders({ 'Private-Token': `${this.token}` });
+        this.authHeaders = new HttpHeaders({
+          'Private-Token': `${this.token}`
+        });
         break;
       default:
         throw new Error('Gitlab Auth Token');

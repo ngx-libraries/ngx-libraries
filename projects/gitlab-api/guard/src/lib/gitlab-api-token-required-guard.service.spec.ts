@@ -16,6 +16,7 @@ describe('GitlabApiTokenRequiredGuard', () => {
   it('should create', () => {
     const guard = TestBed.inject(GitlabApiTokenRequiredGuard);
 
-    expect(guard).toBeTruthy();
+    expect(guard)
+      .toBeTruthy();
   });
 });

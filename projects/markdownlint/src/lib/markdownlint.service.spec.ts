@@ -7,6 +7,7 @@ describe('MarkdownlintService', () => {
 
   it('should be created', () => {
     const service = TestBed.inject(MarkdownlintService);
-    expect(service).toBeTruthy();
+    expect(service)
+      .toBeTruthy();
   });
 });
