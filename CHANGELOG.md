@@ -1,3 +1,14 @@
+## [4.0.0](https://gitlab.com/ngx-library/ngx-library/compare/v3.0.1...v4.0.0) (2023-02-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* use angular v15
+
+### Features
+
+* update to angular v15 ([cd19c1a](https://gitlab.com/ngx-library/ngx-library/commit/cd19c1a012b6267d7756cebc2077c277d42312da))
+
 ### [3.0.1](https://gitlab.com/ngx-library/ngx-library/compare/v3.0.0...v3.0.1) (2022-02-15)
 
 
