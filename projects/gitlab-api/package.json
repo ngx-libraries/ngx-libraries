@@ -1,12 +1,12 @@
 {
   "name": "@ngx-library/gitlab-api",
-  "version": "15.0.0",
+  "version": "16.0.0",
   "peerDependencies": {
-    "@angular/common": "^15.1.2",
-    "@angular/core": "^15.1.2",
-    "@angular/router": "^15.1.2",
-    "@ngx-pwa/local-storage": "^15.0.0",
-    "rxjs": "^7.8.0"
+    "@angular/common": "^16.2.8",
+    "@angular/core": "^16.2.8",
+    "@angular/router": "^16.2.8",
+    "@ngx-pwa/local-storage": "^16.3.0",
+    "rxjs": "^7.8.1"
   },
   "homepage": "https://gitlab.com/ngx-library/ngx-library/-/blob/develop/projects/gitlab-api",
   "repository": {
@@ -19,7 +19,7 @@
     "url": "https://gitlab.com/ngx-library/ngx-library/issues"
   },
   "dependencies": {
-    "tslib": "2.5.0"
+    "tslib": "2.6.2"
   },
   "publishConfig": {
     "access": "public"

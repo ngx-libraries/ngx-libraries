@@ -1,6 +1,6 @@
 {
   "name": "@ngx-library/eslint-config",
-  "version": "15.0.0",
+  "version": "16.0.0",
   "peerDependencies": {
     "@angular-eslint/builder": "^16.2.0",
     "@angular-eslint/eslint-plugin": "^16.2.0",

@@ -1,6 +1,6 @@
 {
   "name": "@ngx-library/infrastructure",
-  "version": "15.0.0",
+  "version": "16.0.0",
   "peerDependencies": {
     "@angular-devkit/core": "^16.2.5",
     "@angular-devkit/schematics": "^16.2.5",
@@ -58,7 +58,7 @@
     "@types/jasmine": "5.1.0",
     "@types/node": "18.14.0",
     "commitlint": "17.7.2",
-    "conventional-changelog-conventionalcommits": "7.0.2",
+    "conventional-changelog-conventionalcommits": "6.1.0",
     "glob": "10.3.10",
     "husky": "4.3.8",
     "ip": "1.1.8",

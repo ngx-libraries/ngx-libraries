@@ -1,3 +1,14 @@
+## [16.0.0](https://gitlab.com/ngx-library/ngx-library/compare/v15.0.0...v16.0.0) (2023-10-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* **angular:** use angular v16
+
+### Features
+
+* **angular:** update to angular v16 ([deddce1](https://gitlab.com/ngx-library/ngx-library/commit/deddce1683ad9f173aebd82c834d41792385018e))
+
 ## [15.0.0](https://gitlab.com/ngx-library/ngx-library/compare/v14.0.0...v15.0.0) (2023-02-02)
 
 

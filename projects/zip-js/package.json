@@ -1,11 +1,11 @@
 {
   "name": "@ngx-library/zip-js",
-  "version": "15.0.0",
+  "version": "16.0.0",
   "peerDependencies": {
-    "@angular/common": "^15.1.2",
-    "@angular/core": "^15.1.2",
-    "rxjs": "^7.8.0",
-    "zip-js": "^0.0.2"
+    "@angular/common": "^16.2.8",
+    "@angular/core": "^16.2.8",
+    "rxjs": "^7.8.1",
+    "zip-js": "^0.0.3"
   },
   "homepage": "https://gitlab.com/ngx-library/ngx-library/-/blob/develop/projects/zip-js",
   "repository": {
@@ -18,7 +18,7 @@
     "url": "https://gitlab.com/ngx-library/ngx-library/issues"
   },
   "dependencies": {
-    "tslib": "2.5.0"
+    "tslib": "2.6.2"
   },
   "publishConfig": {
     "access": "public"
