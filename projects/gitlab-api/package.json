@@ -1,6 +1,13 @@
 {
+  "bugs": {
+    "url": "https://gitlab.com/ngx-library/ngx-library/issues"
+  },
+  "dependencies": {
+    "tslib": "2.6.2"
+  },
+  "homepage": "https://gitlab.com/ngx-library/ngx-library/-/blob/develop/projects/gitlab-api",
+  "license": "MIT",
   "name": "@ngx-library/gitlab-api",
-  "version": "16.0.1",
   "peerDependencies": {
     "@angular/common": "^16.2.8",
     "@angular/core": "^16.2.8",
@@ -8,20 +15,13 @@
     "@ngx-pwa/local-storage": "^16.3.0",
     "rxjs": "^7.8.1"
   },
-  "homepage": "https://gitlab.com/ngx-library/ngx-library/-/blob/develop/projects/gitlab-api",
-  "repository": {
-    "type": "git",
-    "url": "git+https://gitlab.com/ngx-library/ngx-library.git",
-    "directory": "projects/gitlab-api"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://gitlab.com/ngx-library/ngx-library/issues"
-  },
-  "dependencies": {
-    "tslib": "2.6.2"
-  },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "repository": {
+    "directory": "projects/gitlab-api",
+    "type": "git",
+    "url": "git+https://gitlab.com/ngx-library/ngx-library.git"
+  },
+  "version": "16.0.1"
 }

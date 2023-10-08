@@ -1,27 +1,4 @@
 {
-  "name": "@ngx-library/eslint-config",
-  "version": "16.0.1",
-  "peerDependencies": {
-    "@angular-eslint/builder": "^16.2.0",
-    "@angular-eslint/eslint-plugin": "^16.2.0",
-    "@angular-eslint/eslint-plugin-template": "^16.2.0",
-    "@angular-eslint/schematics": "^16.2.0",
-    "@angular-eslint/template-parser": "^16.2.0"
-  },
-  "homepage": "https://gitlab.com/ngx-library/ngx-library/-/blob/develop/projects/eslint-config",
-  "repository": {
-    "type": "git",
-    "url": "https://gitlab.com/ngx-library/ngx-library.git",
-    "directory": "projects/eslint-config"
-  },
-  "exports": {
-    "./configs/*": {
-      "default": "./configs/*.js"
-    },
-    "./prettier/*": {
-      "default": "./prettier/*.js"
-    }
-  },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "6.7.4",
     "@typescript-eslint/parser": "6.7.4",
@@ -38,7 +15,30 @@
     "prettier-plugin-organize-attributes": "1.0.0",
     "tslib": "2.6.2"
   },
+  "exports": {
+    "./configs/*": {
+      "default": "./configs/*.js"
+    },
+    "./prettier/*": {
+      "default": "./prettier/*.js"
+    }
+  },
+  "homepage": "https://gitlab.com/ngx-library/ngx-library/-/blob/develop/projects/eslint-config",
+  "name": "@ngx-library/eslint-config",
+  "peerDependencies": {
+    "@angular-eslint/builder": "^16.2.0",
+    "@angular-eslint/eslint-plugin": "^16.2.0",
+    "@angular-eslint/eslint-plugin-template": "^16.2.0",
+    "@angular-eslint/schematics": "^16.2.0",
+    "@angular-eslint/template-parser": "^16.2.0"
+  },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "repository": {
+    "directory": "projects/eslint-config",
+    "type": "git",
+    "url": "https://gitlab.com/ngx-library/ngx-library.git"
+  },
+  "version": "16.0.1"
 }

@@ -1,4 +1,8 @@
 {
+  "baseBranches": [
+    "develop"
+  ],
+  "commitMessageTopic": "{{depName}}",
   "extends": [
     ":timezone(Europe/Moscow)",
     ":separateMajorReleases",
@@ -21,37 +25,50 @@
     "group:recommended",
     "helpers:disableTypesNodeMajor"
   ],
-  "commitMessageTopic": "{{depName}}",
-  "baseBranches": ["develop"],
   "packageRules": [
     {
-      "matchPackageNames": ["husky"],
+      "matchPackageNames": [
+        "husky"
+      ],
       "separateMinorPatch": true
     },
     {
-      "matchPackageNames": ["husky"],
-      "matchUpdateTypes": ["major"],
-      "enabled": false
+      "enabled": false,
+      "matchPackageNames": [
+        "husky"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ]
     },
     {
-      "matchPackageNames": ["typescript"],
+      "matchPackageNames": [
+        "typescript"
+      ],
       "separateMinorPatch": true
     },
     {
-      "matchPackageNames": ["typescript"],
-      "matchUpdateTypes": ["minor","major"],
-      "automerge": false
+      "automerge": false,
+      "matchPackageNames": [
+        "typescript"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "major"
+      ]
     },
     {
-      "matchDepTypes": ["peerDependencies"],
+      "matchDepTypes": [
+        "peerDependencies"
+      ],
       "rangeStrategy": "bump"
     },
     {
+      "groupName": "Angular packages",
       "matchSourceUrlPrefixes": [
         "https://github.com/angular/angular-cli",
         "https://github.com/angular/angular"
-      ],
-      "groupName": "Angular packages"
+      ]
     }
   ]
 }

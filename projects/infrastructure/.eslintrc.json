@@ -4,53 +4,57 @@
   ],
   "overrides": [
     {
-      "files": [
-        "*.ts"
-      ],
-      "parserOptions": {
-        "project": [
-          "projects/infrastructure/tsconfig.lib.json",
-          "projects/infrastructure/tsconfig.spec.json"
-        ],
-        "createDefaultProgram": true
-      },
       "extends": [
         "../eslint-config/configs/typescript",
         "../eslint-config/configs/typescript-codestyle",
         "../eslint-config/configs/typescript-weak"
       ],
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "createDefaultProgram": true,
+        "project": [
+          "projects/infrastructure/tsconfig.lib.json",
+          "projects/infrastructure/tsconfig.spec.json"
+        ]
+      },
       "rules": {
-        "@angular-eslint/directive-selector": [
-          "error",
-          {
-            "type": "attribute",
-            "prefix": ["lib"],
-            "style": "camelCase"
-          }
-        ],
         "@angular-eslint/component-selector": [
           "error",
           {
-            "type": "element",
-            "prefix": ["lib"],
-            "style": "kebab-case"
+            "prefix": [
+              "lib"
+            ],
+            "style": "kebab-case",
+            "type": "element"
+          }
+        ],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "prefix": [
+              "lib"
+            ],
+            "style": "camelCase",
+            "type": "attribute"
           }
         ]
       }
     },
     {
+      "extends": "../eslint-config/configs/templates",
       "files": [
         "*.html"
       ],
       "parser": "@angular-eslint/template-parser",
       "parserOptions": {
+        "createDefaultProgram": true,
         "project": [
           "projects/infrastructure/tsconfig.lib.json",
           "projects/infrastructure/tsconfig.spec.json"
-        ],
-        "createDefaultProgram": true
+        ]
       },
-      "extends": "../eslint-config/configs/templates",
       "rules": {}
     }
   ]

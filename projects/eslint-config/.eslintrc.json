@@ -4,53 +4,57 @@
   ],
   "overrides": [
     {
-      "files": [
-        "*.ts"
-      ],
-      "parserOptions": {
-        "project": [
-          "projects/eslint-config/tsconfig.lib.json",
-          "projects/eslint-config/tsconfig.spec.json"
-        ],
-        "createDefaultProgram": true
-      },
       "extends": [
         "./configs/typescript",
         "./configs/typescript-codestyle",
         "./configs/typescript-weak"
       ],
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "createDefaultProgram": true,
+        "project": [
+          "projects/eslint-config/tsconfig.lib.json",
+          "projects/eslint-config/tsconfig.spec.json"
+        ]
+      },
       "rules": {
-        "@angular-eslint/directive-selector": [
-          "error",
-          {
-            "type": "attribute",
-            "prefix": ["lib"],
-            "style": "camelCase"
-          }
-        ],
         "@angular-eslint/component-selector": [
           "error",
           {
-            "type": "element",
-            "prefix": ["lib"],
-            "style": "kebab-case"
+            "prefix": [
+              "lib"
+            ],
+            "style": "kebab-case",
+            "type": "element"
+          }
+        ],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "prefix": [
+              "lib"
+            ],
+            "style": "camelCase",
+            "type": "attribute"
           }
         ]
       }
     },
     {
+      "extends": "./configs/templates",
       "files": [
         "*.html"
       ],
       "parser": "@angular-eslint/template-parser",
       "parserOptions": {
+        "createDefaultProgram": true,
         "project": [
           "projects/eslint-config/tsconfig.lib.json",
           "projects/eslint-config/tsconfig.spec.json"
-        ],
-        "createDefaultProgram": true
+        ]
       },
-      "extends": "./configs/templates",
       "rules": {}
     }
   ]

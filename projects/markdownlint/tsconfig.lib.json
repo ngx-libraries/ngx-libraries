@@ -5,15 +5,15 @@
     "strictMetadataEmit": true
   },
   "compilerOptions": {
-    "outDir": "../../out-tsc/lib",
-    "declarationMap": true,
     "declaration": true,
+    "declarationMap": true,
     "inlineSources": true,
-    "types": [],
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "outDir": "../../out-tsc/lib",
+    "types": []
   },
   "exclude": [
     "**/*.spec.ts"

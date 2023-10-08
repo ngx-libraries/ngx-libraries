@@ -1,25 +1,25 @@
 {
-  "name": "@ngx-library/common",
-  "version": "16.0.1",
-  "peerDependencies": {
-    "@angular/common": "^16.2.8",
-    "@angular/core": "^16.2.8",
-    "rxjs": "^7.8.1"
-  },
-  "homepage": "https://gitlab.com/ngx-library/ngx-library/-/blob/develop/projects/common",
-  "repository": {
-    "type": "git",
-    "url": "git+https://gitlab.com/ngx-library/ngx-library.git",
-    "directory": "projects/common"
-  },
-  "license": "MIT",
   "bugs": {
     "url": "https://gitlab.com/ngx-library/ngx-library/issues"
   },
   "dependencies": {
     "tslib": "2.6.2"
   },
+  "homepage": "https://gitlab.com/ngx-library/ngx-library/-/blob/develop/projects/common",
+  "license": "MIT",
+  "name": "@ngx-library/common",
+  "peerDependencies": {
+    "@angular/common": "^16.2.8",
+    "@angular/core": "^16.2.8",
+    "rxjs": "^7.8.1"
+  },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "repository": {
+    "directory": "projects/common",
+    "type": "git",
+    "url": "git+https://gitlab.com/ngx-library/ngx-library.git"
+  },
+  "version": "16.0.1"
 }

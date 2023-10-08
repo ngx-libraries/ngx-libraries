@@ -1,26 +1,26 @@
 {
-  "name": "@ngx-library/markdownlint",
-  "version": "16.0.1",
-  "peerDependencies": {
-    "@angular/common": "^16.2.8",
-    "@angular/core": "^16.2.8",
-    "markdownlint": "^0.31.1",
-    "rxjs": "^7.8.1"
-  },
-  "homepage": "https://gitlab.com/ngx-library/ngx-library/-/blob/develop/projects/markdownlint",
-  "repository": {
-    "type": "git",
-    "url": "git+https://gitlab.com/ngx-library/ngx-library.git",
-    "directory": "projects/markdownlint"
-  },
-  "license": "MIT",
   "bugs": {
     "url": "https://gitlab.com/ngx-library/ngx-library/issues"
   },
   "dependencies": {
     "tslib": "2.6.2"
   },
+  "homepage": "https://gitlab.com/ngx-library/ngx-library/-/blob/develop/projects/markdownlint",
+  "license": "MIT",
+  "name": "@ngx-library/markdownlint",
+  "peerDependencies": {
+    "@angular/common": "^16.2.8",
+    "@angular/core": "^16.2.8",
+    "markdownlint": "^0.31.1",
+    "rxjs": "^7.8.1"
+  },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "repository": {
+    "directory": "projects/markdownlint",
+    "type": "git",
+    "url": "git+https://gitlab.com/ngx-library/ngx-library.git"
+  },
+  "version": "16.0.1"
 }

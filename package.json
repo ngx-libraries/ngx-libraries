@@ -1,14 +1,9 @@
 {
-  "name": "ngx-library",
-  "version": "16.0.1",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint"
+  "commitlint": {
+    "extends": [
+      "./projects/infrastructure/commitlint"
+    ]
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "16.2.8",
     "@angular/cdk": "16.2.7",
@@ -124,28 +119,33 @@
     "node": ">=18.0.0",
     "npm": ">=8.0.0"
   },
-  "commitlint": {
-    "extends": [
-      "./projects/infrastructure/commitlint"
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.html": [
+      "eslint --fix"
+    ],
+    "*.ts": [
+      "eslint --fix"
     ]
+  },
+  "name": "ngx-library",
+  "private": true,
+  "scripts": {
+    "build": "ng build",
+    "lint": "ng lint",
+    "ng": "ng",
+    "start": "ng serve",
+    "test": "ng test"
   },
   "stylelint": {
     "extends": [
       "./projects/infrastructure/stylelint"
     ]
   },
-  "lint-staged": {
-    "*.ts": [
-      "eslint --fix"
-    ],
-    "*.html": [
-      "eslint --fix"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  }
+  "version": "16.0.1"
 }
