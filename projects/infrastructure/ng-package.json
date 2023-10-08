@@ -14,7 +14,7 @@
     "@semantic-release/exec",
     "@semantic-release/git",
     "@semantic-release/gitlab",
-    "@sentry/angular",
+    "@sentry/angular-ivy",
     "@sentry/cli",
     "@sentry/tracing",
     "@types/jasmine",

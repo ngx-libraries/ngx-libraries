@@ -5,7 +5,8 @@ module.exports = {
     'node': true
   },
   'extends': [
-    'plugin:@angular-eslint/template/recommended'
+    'plugin:@angular-eslint/template/recommended',
+    'plugin:prettier/recommended'
   ],
   'parser': '@angular-eslint/template-parser',
   'parserOptions': {
@@ -17,6 +18,15 @@ module.exports = {
     '@angular-eslint/template'
   ],
   'rules': {
+    'prettier/prettier': [
+      'error',
+      {
+        'parser': 'angular'
+      },
+      {
+        'usePrettierrc': true
+      }
+    ],
     '@angular-eslint/template/conditional-complexity': 'error',
     '@angular-eslint/template/cyclomatic-complexity': [
       'error',

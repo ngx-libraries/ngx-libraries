@@ -1,6 +1,10 @@
-const { karma } = require('./karma');
+const {
+  karma
+} = require('./karma');
 
-const { join } = require('path');
+const {
+  join
+} = require('path');
 
 module.exports = function (config) {
   config.set(karma({

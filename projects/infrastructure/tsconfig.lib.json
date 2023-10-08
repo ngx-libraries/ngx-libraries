@@ -9,8 +9,8 @@
     "declarationMap": true,
     "inlineSources": true,
     "lib": [
-      "es2020",
-      "dom"
+      "dom",
+      "es2020"
     ],
     "outDir": "../../out-tsc/lib",
     "types": []

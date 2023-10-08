@@ -1,19 +1,24 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/@ngx-library/eslint-config",
-  "deleteDestPath": false,
   "assets": [
-    "./configs/**/*"
+    "./configs/**/*",
+    "./prettier/**/*"
   ],
   "allowedNonPeerDependencies": [
     "@typescript-eslint/eslint-plugin",
     "@typescript-eslint/parser",
     "eslint",
+    "eslint-config-prettier",
     "eslint-plugin-import",
     "eslint-plugin-import-newlines",
     "eslint-plugin-jsdoc",
     "eslint-plugin-no-null",
-    "eslint-plugin-prefer-arrow"
+    "eslint-plugin-prefer-arrow",
+    "eslint-plugin-prettier",
+    "eslint-plugin-yml",
+    "prettier",
+    "prettier-plugin-organize-attributes"
   ],
   "lib": {
     "entryFile": "src/public-api.ts"

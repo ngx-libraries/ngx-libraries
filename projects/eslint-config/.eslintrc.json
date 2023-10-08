@@ -15,9 +15,9 @@
         "createDefaultProgram": true
       },
       "extends": [
-        "../eslint-config/configs/typescript",
-        "../eslint-config/configs/typescript-codestyle",
-        "../eslint-config/configs/typescript-weak"
+        "./configs/typescript",
+        "./configs/typescript-codestyle",
+        "./configs/typescript-weak"
       ],
       "rules": {
         "@angular-eslint/directive-selector": [
@@ -50,7 +50,7 @@
         ],
         "createDefaultProgram": true
       },
-      "extends": "../eslint-config/configs/templates",
+      "extends": "./configs/templates",
       "rules": {}
     }
   ]

@@ -9,8 +9,8 @@
       ],
       "parserOptions": {
         "project": [
-          "projects/eslint-config/tsconfig.lib.json",
-          "projects/eslint-config/tsconfig.spec.json"
+          "projects/infrastructure/tsconfig.lib.json",
+          "projects/infrastructure/tsconfig.spec.json"
         ],
         "createDefaultProgram": true
       },
@@ -45,8 +45,8 @@
       "parser": "@angular-eslint/template-parser",
       "parserOptions": {
         "project": [
-          "projects/eslint-config/tsconfig.lib.json",
-          "projects/eslint-config/tsconfig.spec.json"
+          "projects/infrastructure/tsconfig.lib.json",
+          "projects/infrastructure/tsconfig.spec.json"
         ],
         "createDefaultProgram": true
       },

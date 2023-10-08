@@ -1,11 +1,5 @@
 import { Injectable } from '@angular/core';
-import {
-  ActivatedRouteSnapshot,
-  CanActivate,
-  CanActivateChild,
-  RouterStateSnapshot,
-  UrlTree
-} from '@angular/router';
+import { ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { GitlabApiAuthStoreService } from '@ngx-library/gitlab-api';
 import { Observable, race, timer } from 'rxjs';
 import { defaultIfEmpty, first, map } from 'rxjs/operators';
@@ -13,7 +7,7 @@ import { defaultIfEmpty, first, map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class GitlabApiTokenRequiredGuard implements CanActivate, CanActivateChild {
+export class GitlabApiTokenRequiredGuard  {
 
   constructor(
     private readonly _gitlabApiAuthService: GitlabApiAuthStoreService

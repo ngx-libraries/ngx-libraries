@@ -232,7 +232,7 @@ module.exports = {
       'undefined'
     ],
     'id-match': 'error',
-    'import/no-default-export': 'error',
+    'import/no-default-export': 'off',
     'import/no-deprecated': 'warn',
     'import/no-extraneous-dependencies': [
       'error',
@@ -253,7 +253,6 @@ module.exports = {
       }
     ],
     'jsdoc/check-alignment': 'error',
-    'jsdoc/newline-after-description': 'error',
     'jsdoc/no-types': 'error',
     'max-classes-per-file': 'off',
     'max-len': [

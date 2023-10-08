@@ -1,0 +1,10 @@
+exclude: # exclude matching issues
+  - message: Build directories
+    paths:
+      - node_modules/**
+      - dist/**
+      - coverage/**
+      - .angular/**
+      - package-lock.json
+      - package.json
+      - CHANGELOG.md

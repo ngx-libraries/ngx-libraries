@@ -1,6 +1,8 @@
+#!/usr/bin/env node
+
 'use strict';
 
-const glob = require('glob')
+const { glob } = require('glob')
 const { EOL } = require('os');
 const { writeFileSync } = require('fs');
 
@@ -49,24 +51,19 @@ function mapDependencies(point, key, prefix = '') {
     : {}
 }
 
-glob(`${projectsPath}/**/package.json`, (err, files) => {
-  if (err) {
-    console.log('Error', err)
-  } else {
-    files.forEach((file) => {
-      const entryPoint = require(file);
+glob(`${projectsPath}/**/package.json`, {})
+  .then((files) => files.forEach((file) => {
+    const entryPoint = require(file);
 
-      const content = JSON.stringify({
-        ...entryPoint,
-        ...isDefined(entryPoint.version)
-          ? {version: projectNextVersion}
-          : {},
-        ...mapDependencies(entryPoint, 'dependencies'),
-        ...mapDependencies(entryPoint, 'devDependencies'),
-        ...mapDependencies(entryPoint, 'peerDependencies', '^')
-      }, null, 2)
+    const content = JSON.stringify({
+      ...entryPoint,
+      ...isDefined(entryPoint.version)
+        ? {version: projectNextVersion}
+        : {},
+      ...mapDependencies(entryPoint, 'dependencies'),
+      ...mapDependencies(entryPoint, 'devDependencies'),
+      ...mapDependencies(entryPoint, 'peerDependencies', '^')
+    }, null, 2)
 
-      writeFileSync(file, `${content}${EOL}`)
-    });
-  }
-});
+    writeFileSync(file, `${content}${EOL}`)
+  }));

@@ -1,7 +1,12 @@
 import { APP_INITIALIZER, ErrorHandler, Provider } from '@angular/core';
 import { Router } from '@angular/router';
-import { createErrorHandler, init, routingInstrumentation, TraceService } from '@sentry/angular';
-import { BrowserTracing } from '@sentry/tracing';
+import {
+  BrowserTracing,
+  createErrorHandler,
+  init,
+  routingInstrumentation,
+  TraceService
+} from '@sentry/angular-ivy';
 
 export function enableSentrySupport<
   TOptions extends { dsn: string; debug?: boolean; enabled?: boolean },
@@ -24,11 +29,11 @@ export function enableSentrySupport<
       : {},
     integrations: [
       new BrowserTracing({
-        tracePropagationTargets: [
-          `${selfUrl}/`
-        ],
         routingInstrumentation: routingInstrumentation
       })
+    ],
+    tracePropagationTargets: [
+      `${selfUrl}/`
     ],
     tracesSampleRate: 1
   });

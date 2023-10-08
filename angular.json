@@ -35,20 +35,16 @@
           },
           "configurations": {
             "development": {
-              "tsConfig": "projects/eslint-config/tsconfig.lib.prod.json",
-              "project": "projects/eslint-config/ng-package.prod.json"
+              "tsConfig": "projects/eslint-config/tsconfig.lib.prod.json"
             },
             "test": {
-              "tsConfig": "projects/eslint-config/tsconfig.lib.prod.json",
-              "project": "projects/eslint-config/ng-package.prod.json"
+              "tsConfig": "projects/eslint-config/tsconfig.lib.prod.json"
             },
             "stage": {
-              "tsConfig": "projects/eslint-config/tsconfig.lib.prod.json",
-              "project": "projects/eslint-config/ng-package.prod.json"
+              "tsConfig": "projects/eslint-config/tsconfig.lib.prod.json"
             },
             "production": {
-              "tsConfig": "projects/eslint-config/tsconfig.lib.prod.json",
-              "project": "projects/eslint-config/ng-package.prod.json"
+              "tsConfig": "projects/eslint-config/tsconfig.lib.prod.json"
             }
           }
         },
@@ -90,20 +86,16 @@
           },
           "configurations": {
             "development": {
-              "tsConfig": "projects/infrastructure/tsconfig.lib.prod.json",
-              "project": "projects/infrastructure/ng-package.prod.json"
+              "tsConfig": "projects/infrastructure/tsconfig.lib.prod.json"
             },
             "test": {
-              "tsConfig": "projects/infrastructure/tsconfig.lib.prod.json",
-              "project": "projects/infrastructure/ng-package.prod.json"
+              "tsConfig": "projects/infrastructure/tsconfig.lib.prod.json"
             },
             "stage": {
-              "tsConfig": "projects/infrastructure/tsconfig.lib.prod.json",
-              "project": "projects/infrastructure/ng-package.prod.json"
+              "tsConfig": "projects/infrastructure/tsconfig.lib.prod.json"
             },
             "production": {
-              "tsConfig": "projects/infrastructure/tsconfig.lib.prod.json",
-              "project": "projects/infrastructure/ng-package.prod.json"
+              "tsConfig": "projects/infrastructure/tsconfig.lib.prod.json"
             }
           }
         },
@@ -148,20 +140,16 @@
           },
           "configurations": {
             "development": {
-              "tsConfig": "projects/common/tsconfig.lib.prod.json",
-              "project": "projects/common/ng-package.prod.json"
+              "tsConfig": "projects/common/tsconfig.lib.prod.json"
             },
             "test": {
-              "tsConfig": "projects/common/tsconfig.lib.prod.json",
-              "project": "projects/common/ng-package.prod.json"
+              "tsConfig": "projects/common/tsconfig.lib.prod.json"
             },
             "stage": {
-              "tsConfig": "projects/common/tsconfig.lib.prod.json",
-              "project": "projects/common/ng-package.prod.json"
+              "tsConfig": "projects/common/tsconfig.lib.prod.json"
             },
             "production": {
-              "tsConfig": "projects/common/tsconfig.lib.prod.json",
-              "project": "projects/common/ng-package.prod.json"
+              "tsConfig": "projects/common/tsconfig.lib.prod.json"
             }
           }
         },
@@ -206,20 +194,16 @@
           },
           "configurations": {
             "development": {
-              "tsConfig": "projects/gitlab-api/tsconfig.lib.prod.json",
-              "project": "projects/gitlab-api/ng-package.prod.json"
+              "tsConfig": "projects/gitlab-api/tsconfig.lib.prod.json"
             },
             "test": {
-              "tsConfig": "projects/gitlab-api/tsconfig.lib.prod.json",
-              "project": "projects/gitlab-api/ng-package.prod.json"
+              "tsConfig": "projects/gitlab-api/tsconfig.lib.prod.json"
             },
             "stage": {
-              "tsConfig": "projects/gitlab-api/tsconfig.lib.prod.json",
-              "project": "projects/gitlab-api/ng-package.prod.json"
+              "tsConfig": "projects/gitlab-api/tsconfig.lib.prod.json"
             },
             "production": {
-              "tsConfig": "projects/gitlab-api/tsconfig.lib.prod.json",
-              "project": "projects/gitlab-api/ng-package.prod.json"
+              "tsConfig": "projects/gitlab-api/tsconfig.lib.prod.json"
             }
           }
         },
@@ -264,20 +248,16 @@
           },
           "configurations": {
             "development": {
-              "tsConfig": "projects/zip-js/tsconfig.lib.prod.json",
-              "project": "projects/zip-js/ng-package.prod.json"
+              "tsConfig": "projects/zip-js/tsconfig.lib.prod.json"
             },
             "test": {
-              "tsConfig": "projects/zip-js/tsconfig.lib.prod.json",
-              "project": "projects/zip-js/ng-package.prod.json"
+              "tsConfig": "projects/zip-js/tsconfig.lib.prod.json"
             },
             "stage": {
-              "tsConfig": "projects/zip-js/tsconfig.lib.prod.json",
-              "project": "projects/zip-js/ng-package.prod.json"
+              "tsConfig": "projects/zip-js/tsconfig.lib.prod.json"
             },
             "production": {
-              "tsConfig": "projects/zip-js/tsconfig.lib.prod.json",
-              "project": "projects/zip-js/ng-package.prod.json"
+              "tsConfig": "projects/zip-js/tsconfig.lib.prod.json"
             }
           }
         },
@@ -336,20 +316,16 @@
           },
           "configurations": {
             "development": {
-              "tsConfig": "projects/markdownlint/tsconfig.lib.prod.json",
-              "project": "projects/markdownlint/ng-package.prod.json"
+              "tsConfig": "projects/markdownlint/tsconfig.lib.prod.json"
             },
             "test": {
-              "tsConfig": "projects/markdownlint/tsconfig.lib.prod.json",
-              "project": "projects/markdownlint/ng-package.prod.json"
+              "tsConfig": "projects/markdownlint/tsconfig.lib.prod.json"
             },
             "stage": {
-              "tsConfig": "projects/markdownlint/tsconfig.lib.prod.json",
-              "project": "projects/markdownlint/ng-package.prod.json"
+              "tsConfig": "projects/markdownlint/tsconfig.lib.prod.json"
             },
             "production": {
-              "tsConfig": "projects/markdownlint/tsconfig.lib.prod.json",
-              "project": "projects/markdownlint/ng-package.prod.json"
+              "tsConfig": "projects/markdownlint/tsconfig.lib.prod.json"
             }
           }
         },
