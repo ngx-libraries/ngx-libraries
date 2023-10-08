@@ -1,3 +1,5 @@
+## [16.0.1](https://gitlab.com/ngx-library/ngx-library/compare/v16.0.0...v16.0.1) (2023-10-08)
+
 ## [16.0.0](https://gitlab.com/ngx-library/ngx-library/compare/v15.0.0...v16.0.0) (2023-10-08)
 
 
