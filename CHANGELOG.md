@@ -1,3 +1,10 @@
+## [16.0.2](https://gitlab.com/ngx-library/ngx-library/compare/v16.0.1...v16.0.2) (2023-10-22)
+
+
+### Bug Fixes
+
+* **markdownlint:** fix markdownlint service library ([44d6859](https://gitlab.com/ngx-library/ngx-library/commit/44d68596abaf3bfb5aa1764a6c32fc8c3dc945d5))
+
 ## [16.0.1](https://gitlab.com/ngx-library/ngx-library/compare/v16.0.0...v16.0.1) (2023-10-08)
 
 ## [16.0.0](https://gitlab.com/ngx-library/ngx-library/compare/v15.0.0...v16.0.0) (2023-10-08)
