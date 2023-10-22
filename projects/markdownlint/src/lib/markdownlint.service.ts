@@ -21,19 +21,15 @@ export class MarkdownlintService {
       .pipe(
         first(),
         switchMap((options) => new Observable<MarkdownlintResult[]>((subscriber) => {
-          markdownlint({
+          const result = markdownlint.library.sync({
             ...options,
             strings: {
               content
             }
-          }, (err: any, result: any) => {
-            if (!err) {
-              subscriber.next(result.content);
-              subscriber.complete();
-            } else {
-              subscriber.error(result);
-            }
           });
+
+          subscriber.next(result.content);
+          subscriber.complete();
         }))
       );
   }
