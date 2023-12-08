@@ -1,3 +1,10 @@
+## [16.1.0](https://gitlab.com/ngx-library/ngx-library/compare/v16.0.2...v16.1.0) (2023-12-08)
+
+
+### Features
+
+* use functional guards insteadof class-based guards ([e0de893](https://gitlab.com/ngx-library/ngx-library/commit/e0de893e39748bf9859a33d82e29a64c26848355))
+
 ## [16.0.2](https://gitlab.com/ngx-library/ngx-library/compare/v16.0.1...v16.0.2) (2023-10-22)
 
 
