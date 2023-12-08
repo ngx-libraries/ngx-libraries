@@ -76,6 +76,6 @@ Semantic Release:
   before_script:
     - npm run ci:publish:before_script --if-present
   script:
-    - $(npm bin)/semantic-release --repository-url "${CI_REPOSITORY_URL}"
+    - ./node_modules/.bin/semantic-release --repository-url "${CI_REPOSITORY_URL}"
   after_script:
     - npm run ci:publish:after_script --if-present
