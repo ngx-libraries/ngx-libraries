@@ -3,7 +3,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { MarkdownlintResult } from './models/markdownlint-result.model';
 
 @Pipe({
-  name: 'lintResult'
+  name: 'lintResult',
+  standalone: true
 })
 export class LintResultPipe implements PipeTransform {
 

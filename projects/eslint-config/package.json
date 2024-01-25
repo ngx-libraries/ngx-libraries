@@ -26,6 +26,7 @@
   "homepage": "https://gitlab.com/ngx-library/ngx-library/-/blob/develop/projects/eslint-config",
   "name": "@ngx-library/eslint-config",
   "peerDependencies": {
+    "@angular/core": "^17.1.1",
     "@angular-eslint/builder": "^16.2.0",
     "@angular-eslint/eslint-plugin": "^16.2.0",
     "@angular-eslint/eslint-plugin-template": "^16.2.0",

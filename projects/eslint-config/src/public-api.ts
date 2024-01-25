@@ -1,1 +1,1 @@
-export * from './lib/eslint-config';
+export * from './lib/ngx-library-eslint-config';

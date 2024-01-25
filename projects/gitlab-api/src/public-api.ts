@@ -5,6 +5,6 @@ export * from './lib/models/auth.model';
 export * from './lib/models/commit-action.model';
 export * from './lib/models/file.model';
 export * from './lib/models/pagination.model';
-export * from './lib/gitlab-api.module';
+export * from './lib/ngx-library-gitlab-api';
 export * from './lib/gitlab-api.service';
 export * from './lib/gitlab-api-auth-store.service';
