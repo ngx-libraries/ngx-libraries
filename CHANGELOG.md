@@ -1,3 +1,15 @@
+## [17.0.0](https://gitlab.com/ngx-library/ngx-library/compare/v16.1.0...v17.0.0) (2024-01-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* **angular:** use angular v17
+
+### Features
+
+* **angular:** update to angular v17 ([e1577a4](https://gitlab.com/ngx-library/ngx-library/commit/e1577a480142819f2bd827a39a767c5239db4076))
+* try to use standalone api ([cda9bef](https://gitlab.com/ngx-library/ngx-library/commit/cda9bef083c1aafd65de2dc938d776c931b9412c))
+
 ## [16.1.0](https://gitlab.com/ngx-library/ngx-library/compare/v16.0.2...v16.1.0) (2023-12-08)
 
 
