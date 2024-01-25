@@ -12,7 +12,8 @@ describe('Optional', () => {
     null: null
   })
     .map(([
-      key, value
+      key,
+      value
     ]) => ({
       key,
       value,
@@ -117,7 +118,8 @@ describe('Optional', () => {
       });
 
       [
-        true, false
+        true,
+        false
       ]
         .forEach((filterResult) => {
           it(`should have Optional<${key}>.filter() method with ${key} value and ${filterResult} condition`, () => {

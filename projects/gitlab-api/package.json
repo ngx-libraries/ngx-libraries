@@ -9,10 +9,10 @@
   "license": "MIT",
   "name": "@ngx-library/gitlab-api",
   "peerDependencies": {
-    "@angular/common": "^16.2.8",
-    "@angular/core": "^16.2.8",
-    "@angular/router": "^16.2.8",
-    "@ngx-pwa/local-storage": "^16.3.0",
+    "@angular/common": "^17.1.1",
+    "@angular/core": "^17.1.1",
+    "@angular/router": "^17.1.1",
+    "@ngx-pwa/local-storage": "^17.0.0",
     "rxjs": "^7.8.1"
   },
   "publishConfig": {

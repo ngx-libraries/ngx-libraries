@@ -55,7 +55,8 @@ export function getAllPagesRecursive<T>(
       }),
       map((responses) => responses.length > 1
         ? [
-          ...responses[0], ...responses[1]
+          ...responses[0],
+          ...responses[1]
         ]
         : [
           ...responses[0]

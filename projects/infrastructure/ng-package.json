@@ -8,7 +8,6 @@
     "@semantic-release/gitlab",
     "@sentry/angular-ivy",
     "@sentry/cli",
-    "@sentry/tracing",
     "@types/jasmine",
     "@types/node",
     "commitlint",

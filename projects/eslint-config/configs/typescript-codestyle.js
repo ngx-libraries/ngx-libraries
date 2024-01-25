@@ -22,6 +22,10 @@ module.exports = {
         'arraysInArrays': false
       }
     ],
+    'array-element-newline': [
+      'error',
+      'always'
+    ],
     'object-curly-newline': [
       'error',
       {

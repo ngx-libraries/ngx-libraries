@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Injectable, NO_ERRORS_SCHEMA } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Injectable } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 
 import { Unsubscribable } from './unsubscribable';
@@ -6,6 +6,7 @@ import { Unsubscribable } from './unsubscribable';
 @Component({
   selector: 'lib-test-unsubscribable',
   template: '',
+  standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 class TestUnsubscribableComponent extends Unsubscribable {
@@ -28,15 +29,11 @@ class TestUnsubscribableService extends Unsubscribable {
 }
 
 describe('Unsubscribable', () => {
-
   beforeEach(() =>
     TestBed
       .configureTestingModule({
-        declarations: [
+        imports: [
           TestUnsubscribableComponent
-        ],
-        schemas: [
-          NO_ERRORS_SCHEMA
         ],
         providers: [
           TestUnsubscribableService

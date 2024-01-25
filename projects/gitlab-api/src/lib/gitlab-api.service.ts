@@ -15,7 +15,8 @@ export const GITLAB_API_BASE_PATH = new InjectionToken('GITLAB_API_BASE_PATH');
 function buildOptionalParams(params: { [key: string]: any }): any {
   return Object.entries(params)
     .reduce<any>((obj, [
-    key, value
+    key,
+    value
   ]) => {
     if (value !== undefined) {
       obj[key] = value;
