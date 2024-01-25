@@ -6,18 +6,17 @@
     "url": "https://gitlab.com/ngx-library/ngx-library/issues"
   },
   "dependencies": {
-    "@commitlint/config-conventional": "17.7.0",
+    "@commitlint/config-conventional": "18.6.0",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/exec": "6.0.3",
     "@semantic-release/git": "10.0.1",
-    "@semantic-release/gitlab": "12.0.6",
-    "@sentry/angular-ivy": "7.73.0",
-    "@sentry/cli": "2.21.2",
-    "@sentry/tracing": "7.73.0",
-    "@types/jasmine": "5.1.0",
-    "@types/node": "18.14.0",
-    "commitlint": "17.7.2",
-    "conventional-changelog-conventionalcommits": "6.1.0",
+    "@semantic-release/gitlab": "13.0.2",
+    "@sentry/angular-ivy": "7.98.0",
+    "@sentry/cli": "2.26.0",
+    "@types/jasmine": "5.1.4",
+    "@types/node": "20.11.6",
+    "commitlint": "18.6.0",
+    "conventional-changelog-conventionalcommits": "7.0.2",
     "glob": "10.3.10",
     "husky": "4.3.8",
     "ip": "1.1.8",
@@ -29,13 +28,13 @@
     "karma-jasmine-html-reporter": "2.1.0",
     "karma-junit-reporter": "2.0.1",
     "karma-spec-reporter": "0.0.36",
-    "lint-staged": "14.0.1",
-    "selenium-webdriver": "4.13.0",
-    "semantic-release": "20.1.0",
-    "stylelint": "15.10.3",
-    "stylelint-config-standard-scss": "11.0.0",
+    "lint-staged": "15.2.0",
+    "selenium-webdriver": "4.17.0",
+    "semantic-release": "23.0.0",
+    "stylelint": "16.2.0",
+    "stylelint-config-standard-scss": "13.0.0",
     "tslib": "2.6.2",
-    "webpack-bundle-analyzer": "4.9.1"
+    "webpack-bundle-analyzer": "4.10.1"
   },
   "exports": {
     "./commitlint": {
@@ -67,10 +66,10 @@
   "license": "MIT",
   "name": "@ngx-library/infrastructure",
   "peerDependencies": {
-    "@angular-devkit/core": "^16.2.5",
-    "@angular-devkit/schematics": "^16.2.5",
-    "@angular/core": "^16.2.8",
-    "@angular/router": "^16.2.8"
+    "@angular-devkit/core": "^17.1.1",
+    "@angular-devkit/schematics": "^17.1.1",
+    "@angular/core": "^17.1.1",
+    "@angular/router": "^17.1.1"
   },
   "publishConfig": {
     "access": "public"
