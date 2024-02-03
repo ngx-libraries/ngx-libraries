@@ -7,9 +7,7 @@ import { MarkdownlintResult } from './models/markdownlint-result.model';
   standalone: true
 })
 export class LintResultPipe implements PipeTransform {
-
   public transform(value: MarkdownlintResult): string {
     return `${value.lineNumber}: [${value.ruleNames.join(', ')}] ${value.ruleDescription}, ${value.errorDetail}`;
   }
-
 }

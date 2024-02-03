@@ -71,7 +71,6 @@ module.exports = {
       proxies = {}
     }
   ) {
-
     return {
       basePath: '.',
       hostname: hostname,

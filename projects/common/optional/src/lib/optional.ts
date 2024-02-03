@@ -1,7 +1,6 @@
 type Nothing = undefined | null;
 
 export class Optional<TValue> {
-
   private readonly _value: TValue | Nothing;
 
   private constructor(value: TValue | Nothing) {
@@ -16,7 +15,7 @@ export class Optional<TValue> {
     return Optional.of<TEmptyValue>(undefined);
   }
 
-  private static isPresent<T>(value: T | Nothing): value is T {
+  public static isPresent<T>(value: T | Nothing): value is T {
     return value !== undefined && value !== null;
   }
 

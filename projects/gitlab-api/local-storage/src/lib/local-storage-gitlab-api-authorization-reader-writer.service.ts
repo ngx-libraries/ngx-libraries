@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { GitlabApiAuth, GitlabApiAuthorizationReader, GitlabApiAuthorizationWriter, GitlabApiAuthType } from '@ngx-library/gitlab-api';
 import { StorageMap } from '@ngx-pwa/local-storage';
 import { Observable } from 'rxjs';
@@ -6,13 +6,9 @@ import { filter, map } from 'rxjs/operators';
 
 @Injectable()
 export class LocalStorageGitlabApiAuthorizationReaderWriterService implements GitlabApiAuthorizationReader, GitlabApiAuthorizationWriter {
-
   private readonly _field = 'gitlabApiAuth';
 
-  constructor(
-    private readonly _storage: StorageMap
-  ) {
-  }
+  private readonly _storage = inject(StorageMap);
 
   public readToken(): Observable<GitlabApiAuth> {
     return this._storage.get(this._field)

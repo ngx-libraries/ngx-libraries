@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { first, switchMap } from 'rxjs/operators';
 
@@ -11,10 +11,7 @@ declare const markdownlint: any;
   providedIn: 'root'
 })
 export class MarkdownlintService {
-
-  constructor(
-    private readonly _markdownlintOptionsService: MarkdownlintOptionsService
-  ) { }
+  private readonly _markdownlintOptionsService = inject(MarkdownlintOptionsService);
 
   public lint(content: any): Observable<MarkdownlintResult[]> {
     return this._markdownlintOptionsService.options
