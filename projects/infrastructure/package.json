@@ -11,10 +11,10 @@
     "@semantic-release/exec": "6.0.3",
     "@semantic-release/git": "10.0.1",
     "@semantic-release/gitlab": "13.0.2",
-    "@sentry/angular-ivy": "7.98.0",
-    "@sentry/cli": "2.26.0",
+    "@sentry/angular-ivy": "7.99.0",
+    "@sentry/cli": "2.27.0",
     "@types/jasmine": "5.1.4",
-    "@types/node": "20.11.6",
+    "@types/node": "20.11.16",
     "commitlint": "18.6.0",
     "conventional-changelog-conventionalcommits": "7.0.2",
     "glob": "10.3.10",
@@ -28,10 +28,10 @@
     "karma-jasmine-html-reporter": "2.1.0",
     "karma-junit-reporter": "2.0.1",
     "karma-spec-reporter": "0.0.36",
-    "lint-staged": "15.2.0",
+    "lint-staged": "15.2.1",
     "selenium-webdriver": "4.17.0",
     "semantic-release": "23.0.0",
-    "stylelint": "16.2.0",
+    "stylelint": "16.2.1",
     "stylelint-config-standard-scss": "13.0.0",
     "tslib": "2.6.2",
     "webpack-bundle-analyzer": "4.10.1"
@@ -66,10 +66,10 @@
   "license": "MIT",
   "name": "@ngx-library/infrastructure",
   "peerDependencies": {
-    "@angular-devkit/core": "^17.1.1",
-    "@angular-devkit/schematics": "^17.1.1",
-    "@angular/core": "^17.1.1",
-    "@angular/router": "^17.1.1"
+    "@angular-devkit/core": "^17.1.2",
+    "@angular-devkit/schematics": "^17.1.2",
+    "@angular/core": "^17.1.2",
+    "@angular/router": "^17.1.2"
   },
   "publishConfig": {
     "access": "public"
@@ -79,5 +79,5 @@
     "type": "git",
     "url": "git+https://gitlab.com/ngx-library/ngx-library.git"
   },
-  "version": "17.0.0"
+  "version": "17.0.1"
 }

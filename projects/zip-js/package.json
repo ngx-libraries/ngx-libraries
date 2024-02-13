@@ -9,8 +9,8 @@
   "license": "MIT",
   "name": "@ngx-library/zip-js",
   "peerDependencies": {
-    "@angular/common": "^17.1.1",
-    "@angular/core": "^17.1.1",
+    "@angular/common": "^17.1.2",
+    "@angular/core": "^17.1.2",
     "rxjs": "^7.8.1",
     "zip-js": "^0.0.3"
   },
@@ -22,5 +22,5 @@
     "type": "git",
     "url": "git+https://gitlab.com/ngx-library/ngx-library.git"
   },
-  "version": "17.0.0"
+  "version": "17.0.1"
 }

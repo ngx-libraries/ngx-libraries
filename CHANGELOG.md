@@ -1,3 +1,10 @@
+## [17.0.1](https://gitlab.com/ngx-library/ngx-library/compare/v17.0.0...v17.0.1) (2024-02-13)
+
+
+### Bug Fixes
+
+* add 'path' param for getProjectRepositoryArchive method ([72ef3b3](https://gitlab.com/ngx-library/ngx-library/commit/72ef3b3e2cc05cd442057cff0cacb0a9e9c846f9))
+
 ## [17.0.0](https://gitlab.com/ngx-library/ngx-library/compare/v16.1.0...v17.0.0) (2024-01-25)
 
 
