@@ -132,14 +132,18 @@ export class GitlabApiService {
 
   public getProjectRepositoryArchive(
     projectId: string,
-    config?: { sha?: string; format?: ArchiveFormat }
+    config?: { sha?: string; path?: string; format?: ArchiveFormat }
   ): Observable<Blob> {
     const format = config && config.format ? config.format : ArchiveFormat.ZIP;
 
-    const params: { sha?: string } = {};
+    const params: { sha?: string; path?: string } = {};
 
     if (config?.sha !== undefined) {
       params.sha = config.sha;
+    }
+
+    if (config?.path !== undefined) {
+      params.path = config.path;
     }
 
     return this._gitlabApiAuthService.auth
